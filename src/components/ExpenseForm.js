@@ -23,7 +23,7 @@ import {MdSend} from 'react-icons/md'
             name="amount" 
             placeholder="e.g. 100"
             value={amount}
-            onChange={handleAmount}/>/>
+            onChange={handleAmount}/>
           </div>
      </div>
       <button type="submit" className="btn">Submit <MdSend/></button>
