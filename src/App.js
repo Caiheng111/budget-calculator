@@ -44,6 +44,30 @@ const handleAlert = ({type, text}) =>{
   },3000)
 }
 
+//clear all items
+
+const clearItems =()=>{
+  setExpenses([]); 
+  handleAlert({type:'danger', text:'All item deleted!'})
+
+}
+
+// delete one item
+const handleDelete=(id) =>{
+  const tempExpense = expenses.filter(item=> item.id !==id)
+  setExpenses(tempExpense);
+  handleAlert({type:'danger', text:'Item deleted!'})
+
+}
+
+// edit one item
+const handleEdit=(id) =>{
+console.log('edit');
+
+}
+
+
+
 const handleSubmit = e =>{
   e.preventDefault(); 
   if(charge !== "" && amount > 0){
@@ -68,7 +92,12 @@ const handleSubmit = e =>{
         handleAmount={handleAmount}
         handleCharge={handleCharge}
         handleSubmit={handleSubmit}/>
-        <ExpenseList expenses = {expenses}/>
+        <ExpenseList 
+        expenses = {expenses} 
+        handleDelete={handleDelete}
+        handleEdit={handleEdit}
+        clearItems={clearItems}
+        />
       </main>
       <h1>
         Total spending : <span className="total">
