@@ -33,7 +33,7 @@ import {MdSend} from 'react-icons/md'
           </div>
      </div>
       <button type="submit" className="btn">
-        {edit? "edit" : "submit"}
+        {edit? "Edit" : "Submit"}
          <MdSend/>
         </button>
     </form>

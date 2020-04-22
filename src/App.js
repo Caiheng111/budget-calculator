@@ -29,14 +29,6 @@ const [id, setId] =useState(0);
 
 
 
-
-
-
-
-
-
-
-
 // functionality
 
 const handleCharge = e =>{
@@ -79,7 +71,6 @@ setAmount(amount)
 setEdit(true)
 setId(id)
 }
-
 
 
 const handleSubmit = e =>{

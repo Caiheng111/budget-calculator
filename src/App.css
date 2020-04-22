@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 :root {
-  --primaryColor: #f15025;
+  --primaryColor: #1abc9c;
   --mainWhite: #fff;
   --mainBlack: #222;
-  --mainGrey: #9e9e9e;
-  --mainRed: #d50000;
+  --mainGrey: #1abc9c;
+  --mainRed: #d35400;
   --mainGreen: #4caf50;
 }
 * {
@@ -67,13 +67,14 @@ label {
   font-size: 14px;
   outline: 0;
   border: none;
-  border-radius: 2px;
+  border-radius: 10px;
   display: block;
   height: 36px;
   line-height: 36px;
   padding: 0 16px;
   text-transform: uppercase;
   margin: 0 auto;
+  margin-bottom: 20px !important;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -81,7 +82,7 @@ label {
   align-items: center;
 }
 .btn:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .btn-icon {
   margin-left: 0.75rem;
@@ -92,6 +93,9 @@ label {
   list-style-type: none;
   border: none;
   padding: 0;
+}
+.items{
+  padding:20px 35px;
 }
 .item {
   background-color: var(--mainWhite);
@@ -117,12 +121,12 @@ label {
   text-transform: capitalize;
 }
 .amount {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   color: var(--mainWhite);
   background-color: var(--primaryColor);
   border-radius: 2px;
-  padding: 1px 3px;
+  padding: 5px 5px;
 }
 .clear-btn,
 .edit-btn {
@@ -137,6 +141,7 @@ label {
 }
 .edit-btn {
   color: var(--mainGreen);
+  
 }
 .total {
   font-weight: 300;

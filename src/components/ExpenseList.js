@@ -6,7 +6,7 @@ import {MdDelete} from 'react-icons/md'
  const ExpenseList = ({expenses,handleDelete, handleEdit, clearItems}) => {
   return (
     <>
-      <ul>
+      <ul className="items">
         {expenses.map(expense=>{
           return <Item key ={expense.id} 
           expense= {expense}
