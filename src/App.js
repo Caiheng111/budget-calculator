@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import ExpenseList from './components/ExpenseList';
 import ExpenseForm from './components/ExpenseForm';
@@ -11,16 +11,29 @@ const initialExpenses=[
   {id:uuid(), charge:"car",amount:1200},
   {id:uuid(), charge:"credit card bill",amount:1100},
 ]
-console.log(initialExpenses);
-
 
 
 function App() {
+
+  const [expenses, setExpenses] = useState(initialExpenses);
+
+
   return (
     <>
       <Alert/>
-      <ExpenseForm/>
-      <ExpenseList/>
+      <h1>Budgets calculators</h1>
+      <main>
+        <ExpenseForm/>
+        <ExpenseList expenses = {expenses}/>
+      </main>
+      <h1>
+        Total spending : <span className="total">
+          $ {expenses.reduce((acc,curr)=>{
+            return (acc += curr.amount)
+          },0)}
+        </span>
+      </h1>
+     
     </>
   );
 }
