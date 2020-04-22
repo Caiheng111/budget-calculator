@@ -1,7 +1,13 @@
 import React from 'react'
 import {MdSend} from 'react-icons/md'
 
- const ExpenseForm = ({charge,amount,handleCharge,handleAmount,handleSubmit}) => {
+ const ExpenseForm = ({
+  charge,
+  amount,
+  handleCharge,
+  handleAmount,
+  handleSubmit,
+  edit}) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-center">
@@ -26,7 +32,10 @@ import {MdSend} from 'react-icons/md'
             onChange={handleAmount}/>
           </div>
      </div>
-      <button type="submit" className="btn">Submit <MdSend/></button>
+      <button type="submit" className="btn">
+        {edit? "edit" : "submit"}
+         <MdSend/>
+        </button>
     </form>
   )
 }
