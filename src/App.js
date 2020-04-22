@@ -22,7 +22,7 @@ function App() {
     <>
       <Alert/>
       <h1>Budgets calculators</h1>
-      <main>
+      <main className="App">
         <ExpenseForm/>
         <ExpenseList expenses = {expenses}/>
       </main>
